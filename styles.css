@@ -1,0 +1,137 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* White background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  text-align: center;
+  min-height: 100vh; /* Extend container to full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 200px solid #f04d2f; /* Orange triangle */
+  border-top: 200px solid transparent;
+}
+
+.login-box {
+  margin-top: 60px; /* Push the form below the triangle */
+}
+
+.login-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.login-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #f3902f; /* Orange underline */
+  margin: 8px auto 0;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 50px 15px 10px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+  color: #333;
+}
+
+.input-group input::placeholder {
+  color: #999;
+}
+
+.input-group .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #000;
+}
+
+.forgot-password {
+  font-size: 14px;
+  color: #f04d2f;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #f04d2f;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.login-btn:hover {
+  background-color: #d53c24; /* Darker orange for hover */
+}
+
+@media (min-height: 900px) {
+  .container {
+    min-height: 100vh; /* Full height for tall screens like iPhone 16 */
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .triangle {
+    border-left: 250px solid #f04d2f; /* Adjust triangle size */
+    border-top: 250px solid transparent;
+  }
+
+  .login-box {
+    margin-top: 100px; /* Extra spacing for tall screens */
+  }
+
+  .input-group input {
+    padding: 20px 60px 20px 15px; /* Larger padding for inputs */
+  }
+
+  .login-btn {
+    padding: 20px; /* Larger button size */
+    font-size: 20px;
+  }
+}
